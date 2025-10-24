@@ -1,0 +1,137 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #f8f9fa;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.navbar nav a {
+    margin: 0 10px;
+    text-decoration: none;
+    color: #333;
+    font-weight: 500;
+}
+
+.auth-buttons button {
+    margin-left: 10px;
+    padding: 8px 16px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    color: White;
+    background-color: black;
+}
+.auth-buttons button:hover {
+    background-color: #333; /* Slightly lighter black */
+    transform: translateY(-2px); /* Subtle lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+}
+
+.hero {
+    text-align: center;
+    padding: 80px 20px;
+    background-color: #e9ecef;
+}
+
+.hero h1 span {
+    color: #007bff;
+}
+
+.hero-buttons {
+    margin-top: 30px;
+}
+
+.hero-buttons button {
+    margin: 5px;
+    padding: 12px 25px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    transition: 0.3s;
+}
+
+.blue-btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.blue-btn:hover {
+    background-color: #0069d9;
+}
+
+.white-btn {
+    background-color: white;
+    color: #333;
+    border: 1px solid #ccc;
+}
+
+.white-btn:hover {
+    background-color: #f1f1f1;
+}
+
+.hero-buttons .green-btn {
+    background-color: #28a745 !important;
+    color: white !important;
+    border: none;
+    padding: 12px 25px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.hero-buttons .green-btn:hover {
+    background-color: #218838 !important;
+}
+
+.how-it-works {
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.steps {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 40px;
+}
+
+.step {
+    width: 250px;
+    margin: 15px;
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.step .icon {
+    font-size: 36px;
+    margin-bottom: 15px;
+}
+
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa;
+    margin-top: 50px;
+}
+
+
+
+
+
+
+
