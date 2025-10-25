@@ -12,6 +12,9 @@ CREATE TABLE admin_data_info (
     Password VARCHAR(255) NOT NULL,
     PRIMARY KEY (admin_id)
 );
+INSERT INTO admin_data_info (Name, username, Email, telephone_num, Password)
+VALUES ('Thevindu Nethmina', 'admin01', 'thevinduariyathilaka@gmail.com', '+94711450155', '123');
+
 
 CREATE TABLE item (
     Item_ID INT(11) NOT NULL AUTO_INCREMENT,

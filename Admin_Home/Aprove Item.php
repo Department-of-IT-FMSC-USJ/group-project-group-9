@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['approve'])) {
             $insert_sql = "
                 INSERT INTO approved_items 
                 (Item_ID, Item_Name, Category, Item_Description, Item_Location, Date_Lost, Item_Image, Bounty)
-                SELECT Item_ID, Item_Name, Category, Item_Description, LItem_Location, Date_Lost, Item_Image, Bounty
+                SELECT Item_ID, Item_Name, Category, Item_Description, Item_Location, Date_Lost, Item_Image, Bounty
                 FROM item
                 WHERE Item_ID = $id
             ";
