@@ -4,11 +4,11 @@ include 'Config.php';
 $owner = null;
 $error = "";
 
-// When the form is submitted
+
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST['load'])) {
     $item_id = intval($_POST['item_id']);
 
-    // Query to find owner details by Item_ID
+  
     $sql = "SELECT * FROM personal_details WHERE Item_Id = $item_id";
     $result = $conn->query($sql);
 

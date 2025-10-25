@@ -1,5 +1,5 @@
 <?php
-// Connect to database
+
 include '../Config/Config.php';
 
 $result = $conn->query("SELECT * FROM Found_Item;");
@@ -88,7 +88,7 @@ $result = $conn->query("SELECT * FROM Found_Item;");
             color: #dc3545;
         }
 
-        /* === Main Content === */
+      
         .main-content {
             flex-grow: 1;
             padding: 30px;
@@ -149,7 +149,7 @@ $result = $conn->query("SELECT * FROM Found_Item;");
 <body>
 
 <div class="dashboard-container">
-    <!-- Sidebar -->
+    
     <aside class="sidebar">
         <div class="logo">
             <i class="fa-solid fa-cube"></i>
@@ -183,7 +183,6 @@ $result = $conn->query("SELECT * FROM Found_Item;");
         </a>
     </aside>
 
-    <!-- Main Content -->
     <main class="main-content">
         <h2>Found Items Table</h2>
 
@@ -202,11 +201,11 @@ $result = $conn->query("SELECT * FROM Found_Item;");
             <?php
            if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $imageName = basename($row['Item_Image']); // Get file name only
-                    $imagePath = "../Home_Page/uploads/" . $imageName; // ✅ Correct relative path
+                    $imageName = basename($row['Item_Image']); 
+                    $imagePath = "../Home_Page/uploads/" . $imageName;
 
                     if (!file_exists($imagePath)) {
-                        $imagePath = "../Home_Page/uploads/no-image.png"; // fallback
+                        $imagePath = "../Home_Page/uploads/no-image.png"; 
                     }
 
                     echo "<tr>

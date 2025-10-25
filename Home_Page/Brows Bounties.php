@@ -1,8 +1,8 @@
 <?php
 include '../Config/Config.php';
 
-// Fetch approved items
-$sql = "SELECT * FROM approved_items"; // <-- your approved items table name
+
+$sql = "SELECT * FROM approved_items"; 
 $result = $conn->query($sql);
 ?>
 
@@ -19,7 +19,7 @@ $result = $conn->query($sql);
         tr:hover { background-color: #f1f1f1; }
         img { width: 100px; height: 100px; object-fit: cover; border-radius: 5px; }
 
-        /* Exit Button */
+   
         .exit-btn {
             position: fixed;
             bottom: 20px;
@@ -83,7 +83,7 @@ $result = $conn->query($sql);
     ?>
 </table>
 
-<!-- Exit Button -->
+
 <a href="../Index.html" class="exit-btn">Exit</a>
 
 </body>

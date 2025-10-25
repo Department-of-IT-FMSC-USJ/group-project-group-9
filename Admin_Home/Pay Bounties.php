@@ -1,8 +1,8 @@
 <?php
-// Connect to database
+
 include '../Config/Config.php';
 
-// Handle deletion
+
 if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete'])) {
     if (!empty($_POST['item_ids'])) {
         foreach ($_POST['item_ids'] as $id) {
@@ -17,7 +17,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['delete'])) {
     }
 }
 
-// Fetch data
+
 $result = $conn->query("
     SELECT f.Lost_Item_ID, f.Your_Name, f.Contact_Number, f.Location_Found, 
            f.Date_Found, f.Bank_Account_No, a.Bounty, a.Item_Image
@@ -88,7 +88,7 @@ $result = $conn->query("
         <a href="../Index.html" class="nav-link logout"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
     </aside>
 
-    <!-- Main Content -->
+    
     <main class="main-content">
         <h2>Pay Bounties</h2>
 
@@ -110,12 +110,12 @@ $result = $conn->query("
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        $bounty = floatval($row['Bounty']); // ✅ Get bounty value
+                        $bounty = floatval($row['Bounty']); 
                         $imageName = basename($row['Item_Image']);
                         $imagePath = "../Home_Page/uploads/" . $imageName;
 
                         if (!file_exists($imagePath) || empty($imageName)) {
-                            $imagePath = "../Home_Page/uploads/no-image.png"; // fallback
+                            $imagePath = "../Home_Page/uploads/no-image.png"; 
                         }
 
                         echo "<tr>

@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $telephone_num = $_POST['telephone_num'];
     $Email = $_POST['Email'];
 
-// Insert data
+
     $sql = "INSERT INTO Admin_Data_Info(username, password, Name, telephone_num, Email)
         VALUES ('$username', '$password', '$Name', '$telephone_num', '$Email')";
 

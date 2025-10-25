@@ -88,7 +88,7 @@ $result = $conn->query("SELECT * FROM item;");
             color: #dc3545;
         }
 
-        /* === Main Content === */
+       \
         .main-content {
             flex-grow: 1;
             padding: 30px;
@@ -224,7 +224,7 @@ $result = $conn->query("SELECT * FROM item;");
                 <?php
                 if ($result->num_rows > 0) {
                     while ($row = $result->fetch_assoc()) {
-                        // Prepare image path (assuming images are stored in "uploads/")
+                        
                         $imagePath = htmlspecialchars($row['Item_Image']);
                         if (!str_starts_with($imagePath, 'Admin_Home/uploads/')) {
                             $imagePath = 'Admin_Home/uploads/' . $imagePath;

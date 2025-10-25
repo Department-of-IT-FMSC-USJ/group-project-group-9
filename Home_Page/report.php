@@ -8,7 +8,7 @@ if (isset($_POST['submit'])) {
     $dateLost = $_POST['dateLost'];
     $bounty = !empty($_POST['bounty']) ? $_POST['bounty'] : 0;
 
-    // Handle image upload
+    
     $targetDir = "uploads/";
     if (!is_dir($targetDir)) mkdir($targetDir, 0777, true);
 
@@ -31,15 +31,15 @@ if (isset($_POST['submit'])) {
         $targetFilePath = NULL;
     }
 
-    // Insert data
+   
     $sql = "INSERT INTO item (Item_Name, Category, Item_Description, LItem_Location, Date_Lost, Item_Image, Bounty)
             VALUES ('$itemName', '$category', '$description', '$location', '$dateLost', '$targetFilePath', '$bounty')";
 
     if ($conn->query($sql) === TRUE) {
-        // Get the newly inserted Item_ID
+        
         $newItemID = $conn->insert_id;
 
-        // Redirect to another page with Item_ID as GET parameter
+       
         header("Location: Personal Details.php?id=" . $newItemID);
         exit();
     } else {

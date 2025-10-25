@@ -1,8 +1,8 @@
 <?php
-// Connect to database
+
 include '../Config/Config.php';
 
-// Fetch all approved items
+
 $result = $conn->query("SELECT * FROM approved_items;");
 ?>
 
@@ -170,11 +170,11 @@ $result = $conn->query("SELECT * FROM approved_items;");
             <?php
             if ($result->num_rows > 0) {
                 while ($row = $result->fetch_assoc()) {
-                    $imageName = basename($row['Item_Image']); // Get file name only
-                    $imagePath = "../Home_Page/uploads/" . $imageName; // ✅ Correct relative path
+                    $imageName = basename($row['Item_Image']); 
+                    $imagePath = "../Home_Page/uploads/" . $imageName; 
 
                     if (!file_exists($imagePath)) {
-                        $imagePath = "../Home_Page/uploads/no-image.png"; // fallback
+                        $imagePath = "../Home_Page/uploads/no-image.png"; 
                     }
 
                     echo "<tr>

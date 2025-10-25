@@ -9,7 +9,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['approve'])) {
         foreach ($item_ids as $id) {
             $id = intval($id);
 
-            // Insert selected record into Approved_Items
+            
             $insert_sql = "
                 INSERT INTO approved_items 
                 (Item_ID, Item_Name, Category, Item_Description, Item_Location, Date_Lost, Item_Image, Bounty)
@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['approve'])) {
                 echo "Insert Error for ID $id: " . $conn->error . "<br>";
             }
 
-            // Delete from item after approval
+           
             $delete_sql = "DELETE FROM item WHERE Item_ID = $id";
             if (!$conn->query($delete_sql)) {
                 echo "Delete Error for ID $id: " . $conn->error . "<br>";

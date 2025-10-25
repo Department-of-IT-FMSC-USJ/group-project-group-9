@@ -1,14 +1,13 @@
 <?php
-// Connect to database
+
 include '../Config/Config.php';
-$row = null; // To store record if found
-$error = ""; // To store error messages
+$row = null; 
+$error = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
-    $item_id = intval($_POST['item_id']); // Get user input safely
-
+    $item_id = intval($_POST['item_id']);
     if ($item_id > 0) {
-        // Prepare query
+      
         $stmt = $conn->prepare("SELECT Item_Id, NIC, Name, Tel_No FROM personal_details WHERE Item_Id = ?");
         $stmt->bind_param("i", $item_id);
         $stmt->execute();
