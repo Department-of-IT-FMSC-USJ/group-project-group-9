@@ -1,4 +1,8 @@
 create database founditdb;
+
+Use  founditdb;
+
+
 CREATE TABLE admin_data_info (
     admin_id INT(11) NOT NULL AUTO_INCREMENT,
     Name VARCHAR(255) NOT NULL,

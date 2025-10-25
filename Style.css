@@ -32,10 +32,14 @@ body {
     color: White;
     background-color: black;
 }
+
 .auth-buttons button:hover {
-    background-color: #333; /* Slightly lighter black */
-    transform: translateY(-2px); /* Subtle lift */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Shadow on hover */
+    background-color: #333;
+    /* Slightly lighter black */
+    transform: translateY(-2px);
+    /* Subtle lift */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    /* Shadow on hover */
 }
 
 .hero {
@@ -129,9 +133,20 @@ footer {
     margin-top: 50px;
 }
 
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    /* small gap between logo and text */
+    font-size: 22px;
+    font-weight: bold;
+    color: #000;
+}
 
-
-
-
-
-
+.logo-img {
+    width: 85px;
+    /* smaller logo size */
+    height: 65px;
+    object-fit: contain;
+    border: 1px solid black;
+}

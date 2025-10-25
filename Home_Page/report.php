@@ -32,7 +32,7 @@ if (isset($_POST['submit'])) {
     }
 
    
-    $sql = "INSERT INTO item (Item_Name, Category, Item_Description, LItem_Location, Date_Lost, Item_Image, Bounty)
+    $sql = "INSERT INTO item (Item_Name, Category, Item_Description, Item_Location, Date_Lost, Item_Image, Bounty)
             VALUES ('$itemName', '$category', '$description', '$location', '$dateLost', '$targetFilePath', '$bounty')";
 
     if ($conn->query($sql) === TRUE) {
